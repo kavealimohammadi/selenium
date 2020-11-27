@@ -1,4 +1,4 @@
-from alpine:latest
+from centos:7
 RUN apk add --no-cache py3-pip \
     && pip3 install --upgrade pip
 
@@ -10,4 +10,4 @@ RUN pip3 --no-cache-dir install -r requirements.txt
 EXPOSE 5000
 
 ENTRYPOINT ["python3"]
-CMD ["helloworld.py"]
+CMD ["test.py"]
